@@ -8,7 +8,7 @@ WORKDIR $bin
 COPY . .
 
 RUN make
-RUN cp demo_MIRE $bin
+#RUN cp demo_MIRE $bin
 
 WORKDIR $bin/simplest_color_balance
 RUN make
