@@ -32,19 +32,3 @@ else:
     p = subprocess.run(['demo_MIRE', 'input_0.sel_rot.png', 'output.png'])
     im = Image.open('output.png')
     (im.rotate(-90)).save('output.png')
-    
-
-    
-    
-    
-
-
-@cherrypy.expose
-@init_app
-def result(self):
-"""
-display the algo results
-"""
-return self.tmpl_out("result.html",
-                        height=image(self.work_dir
-                                    + 'output.png').size[1])
